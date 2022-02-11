@@ -28,17 +28,22 @@ window.addEventListener('DOMContentLoaded', () => {
 			// console.log('No Error');
 			formInfo.classList.add('active');
 			formUserName.textContent = formUserNameValue;
-			formBack.addEventListener('click', () => {
-				form.reset();
-				formInfo.classList.remove('active');
+
+            function resetForm() {
                 selectBox.empty();
                 selectBox2.empty();
                 selectBox3.empty();
-			});
-			setTimeout(() => {
 				form.reset();
 				formInfo.classList.remove('active');
-			}, 5000);
+
+                const formGroups = Array.from(form.querySelectorAll('.form__group'));
+                formGroups.forEach(formGroup => {
+                    formGroup.classList.remove('error');
+                });
+            }
+
+			formBack.addEventListener('click', resetForm);
+			setTimeout(resetForm, 5000);
 		}else{
 			// console.log('Error');
 		}
@@ -63,10 +68,10 @@ window.addEventListener('DOMContentLoaded', () => {
 					// console.log(i.checked);
 					if(!radioCheck){
 						if(!i.checked){
-							i.parentNode.classList.add("error");
+							i.closest(".form__group").classList.add("error");
 							radioCheck = false;
 						}else{
-							i.parentNode.classList.remove("error");
+							i.closest(".form__group").classList.remove("error");
 							radioCheck = true;
 						}
 					}
@@ -74,11 +79,11 @@ window.addEventListener('DOMContentLoaded', () => {
 				case 'checkbox':
 					if(!checkboxCheck){
 						if(!i.checked){
-							i.parentNode.classList.add("error");
+							i.closest(".form__group").classList.add("error");
 							checkboxCheck = false;
 							valid.push(i);
 						}else{
-							i.parentNode.classList.remove("error");
+							i.closest(".form__group").classList.remove("error");
 							checkboxCheck = true;
 						}
 					}
@@ -93,43 +98,43 @@ window.addEventListener('DOMContentLoaded', () => {
 						formUserNameValue = i.value;
 					}
 					if(_thisVal==''){
-						i.parentNode.classList.add("error");
+						i.closest(".form__group").classList.add("error");
 						valid.push(i.getAttribute('name'));
 					}else{
-						i.parentNode.classList.remove("error");
+						i.closest(".form__group").classList.remove("error");
 					}
 				break;
 				case 'tel':
 					if(i.value=='' || isNaN(i.value)){
-						i.parentNode.classList.add("error");
+						i.closest(".form__group").classList.add("error");
 						valid.push(i.getAttribute('name'));
 					}else{
-						i.parentNode.classList.remove("error");
+						i.closest(".form__group").classList.remove("error");
 					}
 				break;
 				case 'email':
 					let regEmail = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 					if(i.value=='' || !regEmail.test(i.value)){
-						i.parentNode.classList.add("error");
+						i.closest(".form__group").classList.add("error");
 						valid.push(i.getAttribute('name'));
 					}else{
-						i.parentNode.classList.remove("error");
+						i.closest(".form__group").classList.remove("error");
 					}
 				break;
 				case 'select':
 					if(i[select.selectedIndex].value==''){
-						i.parentNode.classList.add("error");
+						i.closest(".form__group").classList.add("error");
 						valid.push(i.getAttribute('select'));
 					}else{
-						i.parentNode.classList.remove("error");
+						i.closest(".form__group").classList.remove("error");
 					}
 				break;
 				default:
 					if(i.value==''){
-						i.parentNode.classList.add("error");
+						i.closest(".form__group").classList.add("error");
 						valid.push(i.getAttribute('name'));
 					}else{
-						i.parentNode.classList.remove("error");
+						i.closest(".form__group").classList.remove("error");
 					}
 				break;
 			}

@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 						if(!i.checked){
 							i.closest(".form__group").classList.add("error");
 							radioCheck = false;
-						}else{
+						} else{
 							i.closest(".form__group").classList.remove("error");
 							radioCheck = true;
 						}

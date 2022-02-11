@@ -1,4 +1,20 @@
 window.addEventListener('DOMContentLoaded', () => {
+	// default
+	let selectBox = new vanillaSelectBox("#select1",{
+        "maxHeight": 200,
+        search: false,
+        placeHolder: "რა ოპერაციული სისტემას იყენებთ?",
+    });
+	let selectBox2 = new vanillaSelectBox("#select2", {
+        "maxHeight": 200,
+        search: false,
+        placeHolder: "რა მიზნით გამოიყენებდით ikiddo-ს?"
+    });
+	let selectBox3 = new vanillaSelectBox("#select3", {
+        "maxHeight": 200,
+        search: false,
+        placeHolder: "ვისთვის გამოიყენებდით ikiddo-ს?"
+    });
 
 	let form = document.getElementById('form');
 	let formInfo = document.querySelector('.form__info');
@@ -15,6 +31,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			formBack.addEventListener('click', () => {
 				form.reset();
 				formInfo.classList.remove('active');
+                selectBox.empty();
+                selectBox2.empty();
+                selectBox3.empty();
 			});
 			setTimeout(() => {
 				form.reset();
@@ -32,6 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		let checkAttr = null;
 		inputs.forEach(function(i,j){
 			i.addEventListener('input', validatInputs);
+			i.addEventListener('change', validatInputs);
 			if(i.getAttribute('type')){
 				checkAttr = i.getAttribute('type');
 			}else{
@@ -123,9 +143,5 @@ window.addEventListener('DOMContentLoaded', () => {
 		}
 		
 	}
-	// default
-	let els = document.querySelectorAll(".selectize");
-	els.forEach(function(select){
-	  NiceSelect.bind(select);
-	});
+
 });

@@ -28,6 +28,7 @@
   --cerulean-blue-color: #3753D1;
   --cadet-blue-color: #A3AEBE;
   --tuna-color: #34383E;
+  --iron-color: #D9DBDD;
   --indigo-color: #4A62CB;
   --azure-color: #3D52AE;
   /*========== Font and typography ==========*/
@@ -277,7 +278,15 @@ button {
   padding-top: 8px;
 }
 
-.form__control, .form .nice-select {
+.form .vsb-main {
+  width: 100%;
+}
+
+.form .vsb-main button {
+  text-align: left;
+}
+
+.form__control, .form .vsb-main button {
   height: auto;
   display: block;
   width: 100%;
@@ -295,7 +304,11 @@ button {
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.form__control:focus, .form .nice-select:focus {
+.form__control:hover, .form .vsb-main button:hover {
+  border-color: var(--iron-color);
+}
+
+.form__control:focus, .form .vsb-main button:focus {
   border-color: var(--ship-cove-color);
 }
 
@@ -409,26 +422,31 @@ button {
   min-width: 100%;
 }
 
-.nice-select::after {
+.vsb-main button {
+  padding-right: 40px !important;
+}
+
+.vsb-main .caret {
   border: none;
   background: url(../img/svg/arrow.svg) no-repeat top left;
   height: 11px;
   width: 13px;
   transform: none;
-  right: 13px;
-  margin-top: -5px;
+  right: 16px !important;
+  top: 50%;
+  margin-top: -5px !important;
   transform-origin: 50% 50%;
 }
 
-.nice-select.open:after {
+.vsb-main.open:after {
   transform: rotate(-180deg);
 }
 
-.nice-select .nice-select-dropdown {
+.vsb-main .nice-select-dropdown {
   width: 100%;
 }
 
-.nice-select .current {
+.vsb-main .current {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -437,26 +455,24 @@ button {
   width: 100%;
 }
 
-.nice-select .nice-select-dropdown {
+.vsb-menu {
   margin-top: 10px;
   border: 2px solid #7989C7;
   box-shadow: none;
   border-radius: 3px;
   width: auto;
-  left: -2px;
-  right: -2px;
+  left: 0;
+  right: 0;
 }
 
-.nice-select .list {
+.vsb-menu .multi {
+  margin-top: 0;
+  background-color: var(--white-color);
   padding-top: 11px;
   padding-bottom: 9px;
 }
 
-.nice-select .option:first-child {
-  display: none;
-}
-
-.nice-select .option {
+.vsb-menu .multi li {
   position: relative;
   z-index: 1;
   line-height: 1.2;
@@ -465,16 +481,16 @@ button {
   margin-bottom: 5px;
 }
 
-.nice-select .option:last-child {
+.vsb-menu .multi li:last-child {
   margin-bottom: 0;
 }
 
-.nice-select .option.selected, .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
+.vsb-menu .multi li.active, .vsb-menu .multi li:hover, .vsb-menu .multi li:focus, .vsb-menu .multi li.active:focus {
   font-weight: normal;
   background-color: transparent;
 }
 
-.nice-select .option::before, .checkbox__icon {
+.vsb-menu .multi li::before, .checkbox__icon {
   content: '';
   height: 18px;
   width: 18px;
@@ -487,13 +503,13 @@ button {
   transition: border-color .15s ease-in-out,background-color .15s ease-in-out;
 }
 
-.nice-select .option.selected::before, .checkbox__input:checked ~ .checkbox__icon {
+.vsb-menu .multi li.active::before, .checkbox__input:checked ~ .checkbox__icon {
   background-color: #3754D0;
   border-color: #3754D0;
 }
 
-.error .nice-select .option.selected::before, .error .checkbox__icon {
-  border-color: var(--error-color);
+.error .vsb-menu .multi li.active::before, .error .checkbox__icon, .error .vsb-main button {
+  border-color: var(--error-color) !important;
 }
 
 .checkbox__label {

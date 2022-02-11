@@ -409,13 +409,6 @@ button {
   min-width: 100%;
 }
 
-.nice-select {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  padding-right: 30px;
-}
-
 .nice-select::after {
   border: none;
   background: url(../img/svg/arrow.svg) no-repeat top left;
@@ -432,6 +425,15 @@ button {
 }
 
 .nice-select .nice-select-dropdown {
+  width: 100%;
+}
+
+.nice-select .current {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 15px;
+  display: block;
   width: 100%;
 }
 

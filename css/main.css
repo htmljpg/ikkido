@@ -413,6 +413,7 @@ button {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  padding-right: 30px;
 }
 
 .nice-select::after {

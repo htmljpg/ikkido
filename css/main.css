@@ -409,6 +409,12 @@ button {
   min-width: 100%;
 }
 
+.nice-select {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .nice-select::after {
   border: none;
   background: url(../img/svg/arrow.svg) no-repeat top left;
@@ -606,3 +612,8 @@ button {
 }
 
 /* For small devices */
+@media (max-width: 340px) {
+  [class*="__container"] {
+    padding: 0 15px;
+  }
+}

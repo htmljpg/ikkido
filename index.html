@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ikiddo</title>
+        <link rel="stylesheet" href="./css/nice-select2.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <a class="header__logo" href="index.html">
+                        <img src="img/svg/logo.svg" alt="logo">
+                    </a>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__container">
+                    <div class="main__row">
+                        <div class="main__cell main__cell--content">
+                            <h1 class="title title--h1 bold text-uppercase">უსაფრთხო ინტერნეტი<br > თქვენი ოჯახისთვის</h1>
+                            <p class="text"><span>
+                                <span>ikiddo</span>
+                            </span> გაძლევთ საშუალებას <span>დაიცვათ</span> თქვენი და თქვენი ოჯახის წევრების მოწყობილობები <span>ინტერნეტ საფრთხეებისგან.</span></p>
+                            <p class="text"><span>შეგიძლიათ დაბლოკოთ</span> მავნე და არასასურველი <span>ვებ გვერდები</span> და რეკლამები, <span>ადევნოთ თვალი</span> თქვენი შვილების ინტერნე <span>აქტივობებს.</span></p>
+                            <div class="in-mobile">
+                                <h5 class="title title--h5 bold">დარეგისტრირდი დღეს.</h5>
+                                <p class="text">გაიგე პირველმა გაშვების შესახებ</p>
+                            </div>
+                        </div>
+                        <div class="main__cell main__cell--form">
+                            <form class="form" action="#" id="form">
+                                <div class="form__top">
+                                    <header class="form__header">
+                                        <h5 class="form__title title title--h5 bold">დარეგისტრირდი დღეს.</h5>
+                                        <h6 class="form__subtitle">გაიგე პირველმა გაშვების შესახებ</h6>
+                                        <img class="form__picture form__picture--1" src="./img/svg/1.svg" alt="form-picture">
+                                        <img class="form__picture form__picture--2" src="./img/svg/2.svg" alt="form-picture">
+                                    </header>
+                                    <div class="form__body">
+                                        <div class="form__groups">
+                                            <div class="form__group form__group--50">
+                                                <input class="form__control form-control" type="text" name="name" placeholder="სახელი" data-name="name">
+                                            </div>
+                                            <div class="form__group form__group--50">
+                                                <input class="form__control form-control" type="text" name="lastname" placeholder="გვარი">
+                                            </div>
+                                            <div class="form__group form__group--50">
+                                                <input class="form__control form-control" type="mail" name="email" placeholder="ელ.ფოსტა">
+                                            </div>
+                                            <div class="form__group form__group--50">
+                                                <input class="form__control form-control" type="tel" name="tel" placeholder="ტელ.ნომერი" data-name="tel">
+                                            </div>
+                                            <div class="form__group">
+                                                <select class="form__control selectize form-control" name="select1" data-name="select">
+                                                    <option value="empty" selected>რა ოპერაციული სისტემას იყენებთ?</option>
+                                                    <option value="Windows">Windows</option>
+                                                    <option value="Windows">Mac OSx</option>
+                                                    <option value="Windows">Linux OS</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group">
+                                                <select class="form__control selectize form-control" name="select2" required data-name="select">
+                                                    <option value="empty" selected>რა მიზნით გამოიყენებდით ikiddo-ს?</option>
+                                                    <option value="option 1">option 1</option>
+                                                    <option value="option 2">option 2</option>
+                                                    <option value="option 3">option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group">
+                                                <select class="form__control selectize form-control" name="select3" required data-name="select">
+                                                    <option value="empty" selected>ვისთვის გამოიყენებდით ikiddo-ს?</option>
+                                                    <option value="option 1">option 1</option>
+                                                    <option value="option 2">option 2</option>
+                                                    <option value="option 3">option 3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form__group">
+                                                <div class="checkbox">
+                                                    <label class="checkbox__label">
+                                                        <input type="checkbox" name="agree" class="checkbox__input form-control">
+                                                        <i class="checkbox__icon"></i>
+                                                        ვეთანხმები <a class="link" href="#" target="_blank">წესებს და პირობებს</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form__group form__group--btn">
+                                                <button class="btn btn--primary btn--fluid" type="submit">რეგისტრაცია</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__info">
+                                        <div class="form__info-wrapper">
+                                            <div class="form__info-image">
+                                                <img src="./img/svg/3.svg" alt="image">
+                                            </div>
+                                            <h5 class="form__info-title title title--h5 bold"><span id="name">ნიკა</span>, გილოცავ!</h5>
+                                            <p class="form__info-text">შენ პირველი გაიგებ ikiddo-ს გაშვების შესახებ</p>
+                                            <button class="button" type="button" id="form-back">უკან დაბრუნება</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__bottom">
+                                    <div class="form__footer">
+                                        <p class="form__text">კითხვების შემთხვევაში დაგვიკავშირდით - <a  class="form__link" href="mailto:hello@ikiddo.io">hello@ikiddo.io</a></p>
+                                        <div class="social">
+                                            <ul class="social__items">
+                                                <li class="social__item">
+                                                    <a class="social__link" href="#" target="_blank">
+                                                        <img class="social__picture" src="./img/svg/7.svg" alt="fb">
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a class="social__link" href="#" target="_blank">
+                                                        <img class="social__picture" src="./img/svg/8.svg" alt="tw">
+                                                    </a>
+                                                </li>
+                                                <li class="social__item">
+                                                    <a class="social__link" href="#" target="_blank">
+                                                        <img class="social__picture" src="./img/svg/9.svg" alt="slack">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="./js/nice-select2.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

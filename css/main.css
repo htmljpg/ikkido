@@ -550,21 +550,7 @@ button {
 
 /*===============  BREAKPOINTS ===============*/
 /* For large devices */
-@media (max-width: 990.98px) {
-  .main__container::after {
-    display: none;
-  }
-  .main__cell {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-  .main__cell--content {
-    margin-bottom: 60px;
-  }
-}
-
-/* For medium devices */
-@media (max-width: 766.98px) {
+@media (max-width: 1030px) {
   body {
     background-color: var(--white-color);
   }
@@ -595,6 +581,9 @@ button {
   .main__container::before {
     top: -47px;
     right: -701px;
+  }
+  .main__container::after {
+    display: none;
   }
   .main__cell--content {
     padding-top: 0;
@@ -654,7 +643,7 @@ button {
   }
 }
 
-@media (min-width: 1000px) and (min-height: 650px) and (max-height: 820px) {
+@media (min-width: 1200px) and (min-height: 650px) and (max-height: 820px) {
   .main {
     display: flex;
     flex-direction: column;

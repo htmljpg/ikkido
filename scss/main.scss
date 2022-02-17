@@ -699,3 +699,11 @@ button{
     }
   }
 }
+
+@media (min-width: 1200px) and (min-height: 650px) and (max-height: 820px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

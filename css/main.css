@@ -57,7 +57,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, .wrapper {
+html, body, .wrapper, .main {
   min-height: 100vh;
 }
 
@@ -645,10 +645,7 @@ button {
   }
 }
 
-@media (min-device-height: 800px) {
-  html, body, .wrapper, .main {
-    height: 100vh;
-  }
+@media (min-device-height: 780px) {
   .main {
     padding-top: 83px;
   }
